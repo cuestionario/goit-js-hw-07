@@ -26,11 +26,12 @@ itemsContainer.addEventListener("click", (e) => {
 
   if (e.target.tagName === "IMG") {
     const source = e.target.dataset.source;
-
-    const instance = basicLightbox.create(
-      `<img src="${source}" alt="${e.target.alt}" />`
+    const alt = e.target.dataset.alt;
+    const instance = basicLightbox.create(   
+      `<img src="${source}" alt="${alt}" />`
     );
-
     instance.show();
   }
 });
+
+
